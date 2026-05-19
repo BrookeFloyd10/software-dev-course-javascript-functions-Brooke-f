@@ -33,25 +33,28 @@ This activity reinforces:
 // ============================================
 
 // Script 1 - Greeting multiple users
-console.log("Welcome, Alice!");
-console.log("Welcome, Bob!");
-console.log("Welcome, Charlie!");
+
+// console.log("Welcome, Alice!");
+// console.log("Welcome, Bob!");
+// console.log("Welcome, Charlie!");
 
 // Script 2 - Sum calculation
-let num1 = 5, num2 = 10;
-let sum = num1 + num2;
-console.log("The sum of 5 and 10 is " + sum);
+
+// let num1 = 5, num2 = 10;
+// let sum = num1 + num2;
+// console.log("The sum of 5 and 10 is " + sum);
 
 // Script 3 - Product calculation
-let product = num1 * num2;
-console.log("The product of 5 and 10 is " + product);
+// let product = num1 * num2;
+// console.log("The product of 5 and 10 is " + product);
 
-// Script 4 - Print names from a list
-let names = ["Alice", "Bob", "Charlie"];
-console.log("Names in the list:");
-for (let i = 0; i < names.length; i++) {
-    console.log(names[i]);
-}
+
+// // Script 4 - Print names from a list
+// let names = ["Alice", "Bob", "Charlie"];
+// console.log("Names in the list:");
+// for (let i = 0; i < names.length; i++) {
+//     console.log(names[i]);
+// }
 
 /*
 ===========================================
@@ -72,3 +75,61 @@ for (let i = 0; i < names.length; i++) {
 */
 
 // ✅ Your refactored code goes below this line!
+
+// Script 1
+function welcome(name){
+   console.log(`Welcome, ${name}!`);
+}
+
+welcome("Alice");
+welcome("Bob");
+welcome("Charlie");
+
+// Script 2
+function sumOfNumbers(num1, num2) {
+let sum = num1 + num2;
+console.log(`The sum of ${num1} and ${num2} is ${sum}`);
+return sum;
+}
+sumOfNumbers(4, 5);
+sumOfNumbers(6, 13);
+sumOfNumbers(2, 9);
+
+// Script 3
+function multiplyNumbers(a, b) {
+let product = a * b;
+console.log(`The product of ${a} and ${b} is ${product}`);
+return product;
+}
+multiplyNumbers(5, 10);
+multiplyNumbers(6, 15);
+multiplyNumbers(2, 9);
+
+// Script 4
+ let names = ["Alice", "Bob", "Charlie"];
+console.log("Names in the list:");
+for (let i = 0; i < names.length; i++) {
+    console.log(names[i]);
+}
+
+let moreNames = ["David", "Emma", "Fred"];
+
+function printNames(nameList) {
+   console.log("Names in the list:");
+   for (let name of nameList) {
+      console.log(name);
+   }
+}
+
+printNames(names);
+printNames(moreNames);
+
+
+function greetAll(nameList) {
+   for (let name of nameList) {
+      welcome(name);
+   }
+}
+
+greetAll(names);
+greetAll(moreNames);
