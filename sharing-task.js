@@ -43,6 +43,7 @@ function attendeeBadge(name, role){
 }
 attendeeBadge("Alice", "Speaker");
 attendeeBadge("Jane", "Production Assistant") // testCase expected output: Name: Jane, Role: Production Assistant
+attendeeBadge("Alan", " Assistant") // testCase expected output: Name: Alan, Role:  Assistant
 
 
 // ============================================
@@ -70,6 +71,7 @@ function calculateCost(attendeeCount, costPerPerson){
 }
 calculateCost(110, 10);
 calculateCost(145, 25); // testCase expected output: $3262.50
+calculateCost(50, 40); // testCase expected output: $2000
 
 
 
@@ -91,6 +93,7 @@ function isValidEmail(email){
 }
 console.log(isValidEmail("email@Gmail.com"));
 console.log(isValidEmail("email@gmailcom")); // testcase expected output: false
+console.log(isValidEmail("alanjohn@gmail.com")); // testcase expected output: true
 
 
 
